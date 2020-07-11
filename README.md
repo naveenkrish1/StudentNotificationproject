@@ -20,17 +20,19 @@
    
    
    
-   FRONT END:
-   Front End contains the following pages:
-              Fetch Api calls are made in front end for communication of the pages with API endpoints 
+  		 FRONT END:
+   				Front End contains the following pages:
+              			Fetch Api calls are made in front end for communication of the pages with API endpoints 
                
 	       
 	       
-	       1.LoginPage:
-                            LoginPage consists of textboxes username and password .once clicked on login
-                            button it validates the form and sents username and password as JSON format to 
-                            loginapi and gets the response as true or false inorder to proceed to next page.
-                            username is then stored in javascript cookie to use it in later pages.
+	      			1.LoginPage:
+                            			
+						
+						LoginPage consists of textboxes username and password .once clicked on login
+                            			button it validates the form and sents username and password as JSON format to 
+                            			loginapi and gets the response as true or false inorder to proceed to next page.
+                           			 username is then stored in javascript cookie to use it in later pages.
                
 	       
 	       
@@ -38,18 +40,22 @@
 	       
 	       
 	       
-	       2.RegisterPage:
-                            Registerpage consists of form with 3 textboxes:
+	       			2.RegisterPage:
+                            			
+						
+						Registerpage consists of form with 3 textboxes:
                                                                         1.username
                                                                         2.email
                                                                         3.password
-                            it then vaildate the form and sends the data as JSON object to registerapi and gets response as boolean to check whether the credentials are registered.
+                            			it then vaildate the form and sends the data as JSON object to registerapi and gets response as boolean to check whether the 							credentials are registered.
                
 	       
 	       
 	       
-	       3.Homepage:
-                          Homepage consists courses to register and it is register course page.once clicked on register button.it proceeds to fetch api function and username,courseid,coursename is sent as JSON format to registercourseapi.
+	       			3.Homepage:
+                          			
+						
+						Homepage consists courses to register and it is register course page.once clicked on register button.it proceeds to fetch api 							function and username,courseid,coursename is sent as JSON format to registercourseapi.
                         
 
                
@@ -58,26 +64,35 @@
 	       
 	       
 	       
-	       4.Addcourses:
-                            Addcourses consists of two checkboxes
+	       			4.Addcourses:
+                          
+			  
+			  
+			  
+			  			Addcourses consists of two checkboxes
                                                                 1.courseid
                                                                 2.coursename
-                            it validates them and sent them to addcoursesapi and gets boolean response to check whether the course is added or not
+                            			it validates them and sent them to addcoursesapi and gets boolean response to check whether the course is added or not
 
                
 	       
-	       5.MyCourses:
-                            Mycourses passes the username to the getcourseapi and gets response as 
-                            JSON object which consits of coursedetails of the user.
+	       			5.MyCourses:
+                            			
+						
+						Mycourses passes the username to the getcourseapi and gets response as 
+                            			JSON object which consits of coursedetails of the user.
                
 	       
 	       
-	       6.Notifications:
-                            Notifications has two arguments 
-                                               1.notification
-                                               2.status
-                            when clicked on notification button.getnotificationapi for the loggeduser takesplace and JSON object of all the notifications comes as response.
-                            after the process updatestatus takesplace .sothat the notifications status are updated as read.
+	      			 6.Notifications:
+                            			
+						
+						
+						Notifications has two arguments 
+                                               			1.notification
+                                               			2.status
+                           			 when clicked on notification button.getnotificationapi for the loggeduser takesplace and JSON object of all the notifications comes as response.
+                            			after the process updatestatus takesplace .sothat the notifications status are updated as read.
 
 
 
@@ -89,86 +104,92 @@ BACK END:
 
 
 
-1.Login service:
- Endpointurl:/login
- MethodType:POST
-          	checkLogin()
-•	USERNAME
-•	PASSWORD
-Login service gets username and password from login page and passes it to checklogin method to check the credentials with database(mysql) and returns boolean to front end on basis of credentials given.
+					1.Login service:
+ 					
+					
+							Endpointurl:/login
+ 							MethodType:POST
+          						checkLogin()
+								•	USERNAME
+								•	PASSWORD
+					Login service gets username and password from login page and passes it to checklogin method to check the credentials with database(mysql) and returns boolean to front end on basis of credentials given.
 
 
 
 
 
 
-2.Signup Service:
-		EndpointUrl:/signup
-		Methodtype:POST
-     		createNewUser()
-•	USERNAME
-•	PASSWORD
-Signup service gets two arguments username and password and passes it to createNewuser method to add it to USER table in database.
+
+
+					2.Signup Service:
+							
+							
+							EndpointUrl:/signup
+							Methodtype:POST
+							createNewUser()
+								•	USERNAME
+								•	PASSWORD
+							Signup service gets two arguments username and password and passes it to createNewuser method to add it to USER table in database.
 
 
 
 
-3.AddcourseAPI:
-                EndPointUrl:/addcourse
-                Methodtype:POST
-               AddCourse()
-•	COURSEID
-•	COURSENAME
-addcourse api gets courseid and coursename and passes it to addcourse method to add it to the course table in database and all students gets a notification in notification table;
+					3.AddcourseAPI:
+							EndPointUrl:/addcourse
+							Methodtype:POST
+						       AddCourse()
+							•	COURSEID
+							•	COURSENAME
+							addcourse api gets courseid and coursename and passes it to addcourse method to add it to the course table in database and all students gets a notification in notification table;
 
 
 
 
-4.RegistercourseAPI:
-                   EndPointURL:/registercourse?username?courseid?coursename
-  			Methodtype:POST
-                   Registercourse()
-•	USERNAME
-•	COURSEID
-•	COURSENAME
-Registercourseapi gets these three arguments and passess it to registercourse method to add it to the database and notification table gets an entry  of a notification that course is registered. 
+					4.RegistercourseAPI:
+							   EndPointURL:/registercourse?username?courseid?coursename
+								Methodtype:POST
+							   Registercourse()
+								•	USERNAME
+								•	COURSEID
+								•	COURSENAME
+								Registercourseapi gets these three arguments and passess it to registercourse method to add it to the database and notification table gets an entry  of a notification that course is registered. 
 
 
 
 
 
-5.GetcoursesApi:
-  		   EndpointURL:/getcourses?username
-               Methodtype:POST
-               Getcourses()
-•	USERNAME
-         	RETURNS:
-•	COURSEID
-•	COURSENAME
-getcourseapi passess the username to getcourseapi and gets all courseid and coursename of the user.
+						5.GetcoursesApi:
+								   EndpointURL:/getcourses?username
+							       Methodtype:POST
+							       Getcourses()
+								•	USERNAME
+										RETURNS:
+								•	COURSEID
+								•	COURSENAME
+								getcourseapi passess the username to getcourseapi and gets all courseid and coursename of the user.
 
 
 
 
-6.NotificationApi:
-          		EndpointUrl:/notifications?username
-                   MethodType:POST
-                   Notifycourses()
-•	USERNAME
-RETURNS:
-•	NOTIFICATIONS
-•	STATUS
-notificationapi passes the username and fetches all the notifications in the table of the specified user. 
+						6.NotificationApi:
+									EndpointUrl:/notifications?username
+								   MethodType:POST
+								   Notifycourses()
+						•	USERNAME
+						RETURNS:
+						•	NOTIFICATIONS
+						•	STATUS
+						notificationapi passes the username and fetches all the notifications in the table of the specified user. 
 
 
 
 
-7.UpdateNotificationStatus:
-                    ENDPOINTURL:/updatestatus
-                     METHODTYPE:POST
-Updatestatus()
-•	notificationid
-this api updates status as read after the click on notification button.
+						7.UpdateNotificationStatus:
+								    ENDPOINTURL:/updatestatus
+								     METHODTYPE:POST
+						Updatestatus()
+						•	notificationid
+						this api updates status as read after the click on notification button.
 
 
 
