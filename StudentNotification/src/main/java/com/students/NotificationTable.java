@@ -1,5 +1,5 @@
 package com.students;
-
+//Class for Notification Table
 public class NotificationTable {
 	
 	String studentId;

@@ -28,5 +28,15 @@ public class NotifyCourses {
 	    connection.close();
 	    return item;
 	}
+	public boolean Updatestatus(String username){
+		Connection connection1 = new ConnectionEstablishment().createConnection();
+		String sql="Update NOTIFICATIONS SET status=? where username=?";
+		PreparedStatement statement = ((java.sql.Connection) connection).prepareStatement(sql);
+		statement.setString(1,"read");
+		statement.setString(2,username);
+		statement.executeUpdate();
+		connection1.close();
+		return true;
+	}
 	
 }

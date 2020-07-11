@@ -1,5 +1,5 @@
 package com.students;
-
+//Class for courseTable
 public class CourseTable {
 	private String courseName;
 
