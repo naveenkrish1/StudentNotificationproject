@@ -194,7 +194,8 @@ BACK END:
 
 
 6.TESTING :
-            1.Our project is designed based on multitier architecture with microservices on top of princples of restfulapis.
+           
+	   1.Our project is designed based on multitier architecture with microservices on top of princples of restfulapis.
 	    
             2.we did a Api testing for all the end points  using jmeter testing we spond 100000 test for apis 
             individually.
