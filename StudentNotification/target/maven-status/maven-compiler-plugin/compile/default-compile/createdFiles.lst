@@ -1,0 +1,16 @@
+com\students\courses\addcourseapi.class
+com\students\login\copy\LogIn.class
+com\students\signup\NewStudent.class
+com\students\courses\getcourseapi.class
+com\students\notification\NotificationApi.class
+com\students\User.class
+com\students\login\copy\StudentLogIn.class
+com\students\ConnectionEstablishment.class
+com\students\NotificationTable.class
+Main.class
+com\students\courses\Courses.class
+com\students\signup\SignUpApi.class
+com\students\notification\NotifyCourses.class
+com\students\StudentCourse.class
+com\students\courses\registercourseapi.class
+com\students\CourseTable.class
