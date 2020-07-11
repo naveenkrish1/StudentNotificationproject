@@ -197,13 +197,13 @@ BACK END:
            
 	   1.Our project is designed based on multitier architecture with microservices on top of princples of restfulapis.
 	    
-            2.we did a Api testing for all the end points  using jmeter testing we spond 100000 test for apis 
+           2.we did a Api testing for all the end points  using jmeter testing we spond 100000 test for apis 
             individually.
             
-	    3.we could see get post patch calls work perfectly fine.
+	   3.we could see get post patch calls work perfectly fine.
             
-	    4.Mysql support million parallel threads
+	   4.Mysql support million parallel threads
             
-	    5.we dont see any issues with database.
+	   5.we dont see any issues with database.
             
-	    6.from restful services we didnt use any static keywords.so multithreading works perfectly fine on these scenerio.
+	   6.from restful services we didnt use any static keywords.so multithreading works perfectly fine on these scenerio.
